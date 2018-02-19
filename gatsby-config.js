@@ -10,5 +10,6 @@ module.exports = {
                 accessToken: 'b784f02e8c79269141e2e11ec717bae507945385f9a2fff18b1fbcb0025ca8a1',
             },
         },
+        'gatsby-transformer-remark',
         'gatsby-plugin-react-helmet'],
 };

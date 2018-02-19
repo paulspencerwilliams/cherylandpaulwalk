@@ -4,7 +4,9 @@ import Link from 'gatsby-link'
 const BlogPost = ({ node }) => {
     return (
             <li>
-                <Link to={node.slug}>{node.title}</Link>
+            <Link to={node.slug}>{node.title}</Link>
+            <img src={node.featureImage.responsiveResolution.src}/>
+            <div>{node.content.childMarkdownRemark.excerpt}</div>
             </li>
     );
 }
@@ -25,6 +27,16 @@ export const pageQuery = graphql`
                 node {
                     title
                     slug
+                    content {
+                        childMarkdownRemark {
+                            excerpt
+                        }
+                    }
+                    featureImage {
+                        responsiveResolution(width: 300, height: 300) {
+                            src
+                        }
+                    }
                 }
             }
         }
