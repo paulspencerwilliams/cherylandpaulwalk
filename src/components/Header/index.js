@@ -23,7 +23,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          Cheryl and Paul Walk
         </Link>
       </h1>
     </div>
